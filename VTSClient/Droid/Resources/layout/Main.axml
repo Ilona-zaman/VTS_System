@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:layout_scrollFlags="scroll|enterAlways" />
+  <android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent">
+    <RelativeLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+          android:id="@+id/listVac"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+        <android.support.design.widget.FloatingActionButton
+          android:id="@+id/addVacButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="bottom|right|end"
+          android:layout_margin="16dp"
+          app:layout_anchor="@id/listVac"
+          android:src="@drawable/material_add_white"
+          app:layout_anchorGravity="bottom|right|end"
+          android:clickable="true" />
+      </android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+    <android.support.design.widget.NavigationView
+      android:id="@+id/nav_view"
+      android:layout_height="match_parent"
+      android:layout_width="240dp"
+      android:layout_gravity="start"
+      android:fitsSystemWindows="true">
+      <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:minHeight="50dp"
+          android:orientation="horizontal"
+          android:background="#FFFFFF">
+          <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/Avatar_Ark"
+            android:gravity="center" />
+          <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+          <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_below="@id/avatar"
+            android:text="Arkadiy Dobkin"
+            android:textColor="#39C5D6" />
+        </RelativeLayout>
+        <ListView
+          android:id="@+id/listFilter"
+          android:layout_below="@id/avatar"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          style="@style/VacationType" />
+      </LinearLayout>
+    </android.support.design.widget.NavigationView>
+  </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

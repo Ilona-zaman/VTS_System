@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:layout_scrollFlags="scroll|enterAlways">
+    <Button
+      android:id="@+id/saveButton"
+      style="@style/button"
+      android:layout_gravity="right"
+      android:text="Save" />
+  </android.support.v7.widget.Toolbar>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <android.support.v4.view.ViewPager
+      android:id="@+id/viewPager"
+      android:layout_width="match_parent"
+      android:layout_height="150dp">
+    </android.support.v4.view.ViewPager>
+    <View
+      android:id="@+id/view1"
+      android:layout_width="wrap_content"
+      android:layout_height="1dp"
+      android:background="#39C5D6" />
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:weightSum="100"
+      android:orientation="horizontal">
+      <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:textColor="#39C5D6"
+        android:textSize="26dp"
+        style="@style/VacationDate"
+        android:id="@+id/startDate"
+        android:layout_gravity="left" />
+      <Button
+        android:id="@+id/endDate"
+        android:layout_weight="50"
+        android:textColor="#A0CC4B"
+        android:textSize="26dp"
+        style="@style/VacationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right" />
+    </LinearLayout>
+    <View
+      android:id="@+id/view1"
+      android:layout_width="wrap_content"
+      android:layout_height="1dp"
+      android:background="#39C5D6" />
+    <RadioGroup
+      android:id="@+id/optGroup"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:weightSum="100">
+      <RadioButton
+        android:id="@+id/approved"
+        android:layout_weight="50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right" />
+      <RadioButton
+        android:id="@+id/closed"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:layout_gravity="left" />
+    </RadioGroup>
+    <View
+      android:id="@+id/view1"
+      android:layout_width="wrap_content"
+      android:layout_height="1dp"
+      android:background="#39C5D6" />
+  </LinearLayout>
+</LinearLayout>
